@@ -1,127 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 10px;
-            border: 3px solid #fff;
-        }
-        nav {
-            margin-top: 1rem;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-        }
-        h2 span {
-            color: #007BFF;
-        }
-        .skills-list ul {
-            list-style: none;
-            padding: 0;
-        }
-        .skills-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .project-card {
-            background: #fafafa;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-        }
-        .project-card img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #333;
-            color: #fff;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashok - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 10px;
+      border: 3px solid #fff;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 25px;
+      background: #fff;
+      margin: 20px auto;
+      width: 85%;
+      border-radius: 10px;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    h2 span {
+      color: #007BFF;
+    }
+    .about p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+    .skills-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>My Portfolio</h1>
-    <img src="myphoto.jpg" alt="My Photo">
-    <nav>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-    </nav>
+  <h1>Ashok - Portfolio</h1>
+  <img src="myphoto.jpg" alt="Ashok Photo">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+  </nav>
 </header>
 
-<section class="skills" id="skills">
-    <h2 class="heading">My <span>Skills</span></h2>
-    <div class="skills-list">
-        <ul>
-            <li><strong>AWS:</strong> Proficient in AWS services including EC2, IAM, EBS, Load Balancer, Auto Scaling Group, VPC, S3, Lambda, RDS, CloudFront, CloudWatch, CloudTrail, SQS, SNS, and Route 53.</li>
-            <li><strong>LINUX:</strong> Experienced in Linux command line, firewall configuration, system troubleshooting, file system management, networking, process management, cron jobs, package management (APT, YUM), user and group management, and file permissions.</li>
-            <li><strong>SCRIPTING:</strong> Skilled in Bash and Python scripts for automation, log analysis, system monitoring, and AWS/DevOps tasks.</li>
-            <li><strong>PYTHON:</strong> Data types, variables, loops, conditionals, functions, exception handling.</li>
-            <li><strong>CCNA:</strong> Knowledgeable in IP addressing, OSI Layer, DNS, DHCP, NAT, SSH, firewall, VPN, HTTP/HTTPS, load balancer, and TCP/UDP.</li>
-        </ul>
-    </div>
+<section class="about" id="about">
+  <h2>About <span>Me</span></h2>
+  <p>
+    Hello! I am Ashok, a passionate <strong>Cloud & DevOps Engineer</strong>.  
+    I have hands-on experience in AWS, Linux, Networking, and Automation.  
+    I am eager to apply my knowledge and contribute to building reliable, scalable IT infrastructures.
+  </p>
 </section>
 
-<section class="projects" id="projects">
-    <h2 class="heading">My <span>Projects</span></h2>
-    <div class="projects">
-        <div class="project-card">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>3-Tier AWS Architecture</h3>
-            <p>Designed and deployed a secure, scalable architecture with EC2, Load Balancer, Auto Scaling, and RDS.</p>
-        </div>
-        <div class="project-card">
-            <img src="project2.jpg" alt="Project 2">
-            <h3>CI/CD Pipeline</h3>
-            <p>Implemented CI/CD using Jenkins, SonarQube, AWS ECR, and multiple agents for automation.</p>
-        </div>
-        <div class="project-card">
-            <img src="project3.jpg" alt="Project 3">
-            <h3>Linux Monitoring Script</h3>
-            <p>Created Bash scripts for disk usage monitoring, log management, and system health checks.</p>
-        </div>
-    </div>
+<section class="skills" id="skills">
+  <h2>My <span>Skills</span></h2>
+  <div class="skills-list">
+    <ul>
+      <li><strong>AWS:</strong> EC2, IAM, EBS, Load Balancer, Auto Scaling, VPC, S3, Lambda, RDS, CloudFront, CloudWatch, CloudTrail, Route 53.</li>
+      <li><strong>Linux:</strong> File system management, networking, firewall config, process management, cron jobs, user management.</li>
+      <li><strong>Scripting:</strong> Bash & Python scripts for automation, monitoring, and AWS CLI tasks.</li>
+      <li><strong>Python:</strong> Variables, loops, conditionals, functions, exception handling.</li>
+      <li><strong>CCNA:</strong> IP addressing, OSI layers, DNS, DHCP, NAT, SSH, firewall, VPN, load balancing.</li>
+    </ul>
+  </div>
 </section>
 
 <footer>
-    <p>© 2025 My Portfolio. All Rights Reserved.</p>
+  <p>© 2025 Ashok Portfolio. All Rights Reserved.</p>
 </footer>
 
 </body>
