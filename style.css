@@ -415,7 +415,6 @@ span {
 .btn-box .btns a::before {
   background: #00abf0;
 }
-
 .education {
   display: flex;
   justify-content: center;
@@ -504,21 +503,20 @@ span {
 .education-content .content p {
   font-size: 1.4rem;
   padding-top: .5rem;
- 
-}
+ }
 .skills-section {
-  min-height: 100vh;           /* Full screen height */
+  min-height: 100vh;           
   display: flex;
-  justify-content: center;     /* Center horizontally */
-  align-items: center;         /* Center vertically */
-  flex-direction: column;      /* Stack heading + list */
+  justify-content: center;     
+  align-items: center;         
+  flex-direction: column;      
   background: #081629;
   text-align: center;
 }
 
 .skills-section .heading {
-  font-size: 3rem;             /* Bigger heading */
-  margin-bottom: 20px;
+  font-size: 3.5rem;           /* Bigger heading */
+  margin-bottom: 25px;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #2196f3;              /* Blue heading */
@@ -527,13 +525,14 @@ span {
 .skills-list {
   list-style: none;
   padding: 0;
-  font-size: 2rem;             /* Larger skill items */
-  color: white;                /* White for skills */
+  font-size: 2.3rem;           /* Bigger skill items */
+  color: white;                
 }
 
 .skills-list li {
-  margin: 12px 0;
+  margin: 15px 0;
 }
+
 
 .contact {
   min-height: auto;
@@ -559,7 +558,6 @@ span {
   margin: .8rem 0;
 
 }
-
 .contact form .input-box .input-field input,
 .contact form .textarea-field textarea {
   width: 100%;
@@ -921,6 +919,7 @@ input:-moz-autofill {
       opacity: 1; /* Restores full opacity when hovered on mobile */
   }
 }
+
 
 
 
