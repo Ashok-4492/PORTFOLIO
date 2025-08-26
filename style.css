@@ -515,20 +515,22 @@ span {
   flex-direction: column;      /* Stack heading + list */
   background: #081629;
   text-align: center;
-  color: white;                /* Text color (for visibility) */
+  color: white;                /* Default white for all text */
 }
 
 .skills h2 {
-  font-size: 4rem;             /* Bigger heading */
+  font-size: 2.5rem;           /* Medium size heading */
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: #2196f3;              /* Blue color only for heading */
 }
 
 .skills ul {
   list-style: none;
   padding: 0;
-  font-size: 2rem;             /* Bigger list items */
+  font-size: 1.5rem;           /* Medium size list items */
+  color: white;                /* Ensure list stays white */
 }
 
 .skills ul li {
@@ -923,6 +925,7 @@ input:-moz-autofill {
       opacity: 1; /* Restores full opacity when hovered on mobile */
   }
 }
+
 
 
 
