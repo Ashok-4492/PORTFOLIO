@@ -1,84 +1,175 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  background: #0d0d0d;
-  color: #fff;
-  line-height: 1.6;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 
-header {
-  position: fixed;
-  width: 100%;
-  padding: 15px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  z-index: 100;
-}
+<body>
+    <header class="header">
+        <a href="#" class="logo">ASHOK</a>
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #00eeff;
-  text-decoration: none;
-}
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
 
-.navbar a {
-  color: #fff;
-  margin: 0 15px;
-  text-decoration: none;
-}
+            <span class="active-nav"></span>
+        </nav>
+    </header>
 
-.navbar a:hover, .navbar .active {
-  color: #00eeff;
-}
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello, It's Me <span class="name">ASHOK</span></h1>
+            <div class="text-animate">
+                <h3>CLOUD ENGINEER</h3>
+            </div>
+            <p>
+                Passionate Cloud Engineer with hands-on experience in AWS (EC2, IAM, VPC, S3, Lambda, CloudWatch, etc.).
+                Skilled in Linux system administration, shell scripting, networking, and user/group management.
+                Experienced with infrastructure as code and automation using Git, Terraform, and Jenkins.
+                Eager to design and manage scalable, secure, and reliable cloud solutions in a dynamic environment.
+            </p>
+            <div class="btn-box">
+                <a href="https://drive.google.com/file/d/1i-d2EMUkeziWD6bcJDtUMOLB834nYfWu/view?usp=sharing"
+                    class="btn">Download CV</a>
+                <a href="tel:+91 6382104492" class="btn">Contact &nbsp;<i class='bx bxs-phone-call'></i></a>
+            </div>
 
-section {
-  padding: 80px 50px;
-}
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/ashok04"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Ashok-8877"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/ashok.__8877"><i class='bx bxl-instagram'></i></a>
+                <a href="mailto:iamashok8877@gmail.com"><i class='bx bxl-gmail'></i></a>
+            </div>
 
-.heading {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00eeff;
-}
+            <div class="home-imagehover">
+                <img src="myimage.jpeg" alt="Image of ASHOK">
+            </div>
+        </div>
+    </section>
 
-.btn {
-  background: #00eeff;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-}
+    <section class="about" id="about">
+        <h2 class="heading">About<span> Me</span></h2>
+        <div class="about-img">
+            <img src="myimg2.jpg" alt="Image of ASHOK">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+            <h3>AWS-CLOUD ENGINEER</h3>
+            <p id="about-text">
+                Cloud Engineer with expertise in AWS, Linux, DevOps, Python, and CCNA networking. Skilled in building
+                scalable cloud solutions, automation, infrastructure management, and continuous integration, with a
+                strong foundation in networking and system optimization.
+            </p>
+            <a href="javascript:void(0);" id="read-more" onclick="toggleReadMore()">Read More</a>
+        </div>
+    </section>
 
-.btn:hover {
-  background: #fff;
-  color: #111;
-}
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title">Education</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2020 - 2024</div>
+                            <h3>Bachelor of Engineering</h3>
+                            <p>I hold a Bachelor of Engineering degree in Electrical and Electronics Engineering from
+                                Anjalai Ammal Mahalingam Engineering College,<br> where I achieved a CGPA of 8.08.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2019 - 2020</div>
+                            <h3>HSC</h3>
+                            <p>I completed my HSC at R.Natesanar Government Higher Secondary School and secured 63%.</p>
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
+                            <h3>SSLC</h3>
+                            <p>I completed my SSLC at Sri R.Natesanar Government Higher Secondary School and secured 77%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.home {
-  text-align: center;
-  padding-top: 120px;
-}
+    <section class="skills-section" id="skills">
+        <h2 class="heading">Skills</h2>
+        <p>My technical level</p>
+        <div class="skills-box">
+            <div class="skills-title">
+                Technologies
+                <span class="arrow-up">&#9650;</span>
+            </div>
+            <ul class="skills-list">
+                <li>AWS</li>
+                <li>Jenkins</li>
+                <li>Kubernetes</li>
+                <li>Docker</li>
+                <li>Git</li>
+                <li>GitLab CI/CD</li>
+                <li>Terraform</li>
+            </ul>
+        </div>
+    </section>
 
-.skills-list p {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact<span> Me!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <div class="focus"></div>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <div class="focus"></div>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" id="phone" placeholder="Phone Number" required>
+                    <div class="focus"></div>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="subject" placeholder="Email Subject" required>
+                    <div class="focus"></div>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <div class="focus"></div>
+            </div>
+            <div class="btn-box">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
 
-.skills-list i {
-  margin-left: 10px;
-  cursor: pointer;
-}
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by ASHOK </p>
+        </div>
+        <div class="footer-icon">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
 
-footer {
-  background: #111;
-  text-align: center;
-  padding: 20px;
-}
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
