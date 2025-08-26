@@ -515,32 +515,24 @@ span {
   flex-direction: column;      /* Stack heading + list */
   background: #081629;
   text-align: center;
+  color: white;                /* Text color (for visibility) */
 }
 
 .skills h2 {
-  font-size: 6rem;             /* Bigger heading */
-  margin-bottom: 4rem;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 4rem;             /* Bigger heading */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.skills-list {
+.skills ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;         /* Center list items */
+  font-size: 2rem;             /* Bigger list items */
 }
 
-.skills-list li {
-  font-size: 3rem;             /* Bigger letters */
-  margin: 1.5rem 0;
-  color: #ededed;
-  font-weight: 600;
-  letter-spacing: 2px;         /* Space between letters */
-  text-transform: uppercase;   /* All caps */
-  text-align: center;          /* Ensure centered text */
+.skills ul li {
+  margin: 10px 0;
 }
 
 
@@ -931,6 +923,7 @@ input:-moz-autofill {
       opacity: 1; /* Restores full opacity when hovered on mobile */
   }
 }
+
 
 
 
