@@ -1,182 +1,936 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+/* Resetting margins, padding, and box-sizing for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  
+  --second--bg-colour:#112e42;
+  --text-colour:#ededed;
+  --bg-colour:#081b29;
+  --main-colour:#00abf0;
 
-<body>
-    <header class="header">
-        <a href="#" class="logo">ASHOK</a>
+}
 
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
 
-            <span class="active-nav"></span>
-        </nav>
-    </header>
+body {
+  background: #081629;
+  color: white;
+}
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hello, It's Me <span class="name">ASHOK</span></h1>
-            <div class="text-animate">
-                <h3>AWS-DEVOPS ENGINEER</h3>
-            </div>
-            <p>
-                Passionate Cloud Engineer with hands-on experience in AWS (EC2, IAM, VPC, S3, Lambda, CloudWatch, etc.).
-                Skilled in Linux system administration, shell scripting, networking, and user/group management.
-                Experienced with infrastructure as code and automation using Git, Terraform, and Jenkins.
-                Eager to design and manage scalable, secure, and reliable cloud solutions in a dynamic environment.
-            </p>
-            <div class="btn-box">
-                <a href="https://drive.google.com/file/d/1TuRm3pB1frua3AEyANsi5L8sP5H4Ulys/view?usp=sharing"
-                    class="btn">Download CV</a>
-                <a href="tel:+91 6382104492" class="btn">Contact &nbsp;<i class='bx bxs-phone-call'></i></a>
-            </div>
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 9%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: .3s;
+}
 
-            <div class="home-sci">
-                <a href="https://www.linkedin.com/in/ashok04"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Ashok-8877"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/ashok.__8877"><i class='bx bxl-instagram'></i></a>
-                <a href="mailto:mailtoashokbalu@gmail.com"><i class='bx bxl-gmail'></i></a>
-            </div>
+.header.sticky {
+  background: #081629;
+}
 
-            <div class="home-imagehover">
-                <img src="myimg2.jpg" alt="Image of ASHOK">
-            </div>
-        </div>
-    </section>
+.logo {
+  position: relative;
+  font-size: 2.5rem;
+  color: #ededed;
+  font-weight: 600;
 
-    <section class="about" id="about">
-        <h2 class="heading">About<span> Me</span></h2>
-        <div class="about-img">
-            <img src="myimage.jpeg" alt="Image of ASHOK">
-            <span class="circle-spin"></span>
-        </div>
-        <div class="about-content">
-            <h3>AWS-DEVOPS ENGINEER</h3>
-            <p id="about-text">
-                Cloud Engineer with expertise in AWS, Linux, DevOps, Python, and CCNA networking. Skilled in building
-                scalable cloud solutions, automation, infrastructure management, and continuous integration, with a
-                strong foundation in networking and system optimization.
-            </p>
-            <a href="javascript:void(0);" id="read-more" onclick="toggleReadMore()">Read More</a>
-        </div>
-    </section>
+}
 
-    <section class="education" id="education">
-        <h2 class="heading">My <span>Journey</span></h2>
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education</h3>
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2020 - 2024</div>
-                            <h3>Bachelor of Engineering</h3>
-                            <p>I hold a Bachelor of Engineering degree in Electrical and Electronics Engineering from
-                                Anjalai Ammal Mahalingam Engineering College,<br> where I achieved a CGPA of 8.08.</p>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2019 - 2020</div>
-                            <h3>HSC</h3>
-                            <p>I completed my HSC at R.Natesanar Government Higher Secondary School and secured 63%.</p>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2017 - 2018</div>
-                            <h3>SSLC</h3>
-                            <p>I completed my SSLC at Sri R.Natesanar Government Higher Secondary School and secured 77%.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background: #081629;
+  animation: showRight 1s ease forwards;
+  animation-delay: .4s;
 
-    <section class="skills-section" id="skills">
-        <h2 class="heading">Skills</h2>
-        <p>My technical level</p>
-        <div class="skills-box">
-            <div class="skills-title">
-                Technologies
-                <span class="arrow-up">&#9650;</span>
-                <span class="arrow-down">&#9650;</span>
-            </div>
-            <ul class="skills-list">
-                <li>AWS</li>
-                <li>LINUX</li>
-                <li>NETWORKING</li>
-                <li>DEVOPS</li>
-                <li>PYTHON</li>
-                <li>BASH SCRIPTING</li>
-                <li>SQL</li>
-            </ul>
-        </div>
-    </section>
+}
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact<span> Me!</span></h2>
-        <form action="#">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" id="name" placeholder="Full Name" required>
-                    <div class="focus"></div>
-                </div>
-                <div class="input-field">
-                    <input type="email" id="email" placeholder="Email Address" required>
-                    <div class="focus"></div>
-                </div>
-            </div>
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="number" id="phone" placeholder="Phone Number" required>
-                    <div class="focus"></div>
-                </div>
-                <div class="input-field">
-                    <input type="text" id="subject" placeholder="Email Subject" required>
-                    <div class="focus"></div>
-                </div>
-            </div>
-            <div class="textarea-field">
-                <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <div class="focus"></div>
-            </div>
-            <div class="btn-box">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
-    </section>
+.navbar {
+  position: relative;
+}
 
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by ASHOK </p>
-        </div>
-        <div class="footer-icon">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
-    </footer>
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
 
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+
+}
+
+#menu-icon {
+  font-size: 36px;
+  color: #00abf0;
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 9%;
+}
+
+.home-content {
+
+  max-width: 60rem;
+  z-index: 99;
+}
+
+.home-content h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.name {
+  font-size: 40px;
+  color: #00abf0;
+}
+
+.home-content .text-animate {
+  position: relative;
+  width: 48.4rem;
+}
+
+.home-content .text-animate h3 {
+  font-size: 3.0rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: .7px var(--main-colour);
+  background-image: linear-gradient(var(--second--bg-colour),var(--text-colour));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: homeBgText 6s linear infinite;
+  animation-delay: 2s;
+
+}
+
+.home-content .text-animate h3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 2px solid #00abf0;
+  z-index: -1;
+  animation: homeCursorText 6s linear infinite;
+  animation-delay: 2s;
+
+}
+
+.home-content p {
+  font-size: 15px;
+  margin: 20px 0 40px;
+
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 34rem;
+  height: 4.5rem;
+  flex-wrap: wrap;
+
+}
+
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #081629;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+
+}
+
+.btn-box .btn:hover {
+  color: #00abf0;
+}
+
+.btn-box .btn:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+
+.btn-box .btn:nth-child(2):hover {
+  color: #081629;
+}
+
+.btn-box .btn:nth-child(2)::before {
+  background: #00abf0;
+}
+
+
+.btn-box .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081629;
+  z-index: -1;
+  transition: .5s;
+
+}
+
+.btn-box .btn:hover::before {
+  width: 100%;
+
+}
 
 
 
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.home-sci a:hover {
+  color: #081629;
+}
+
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: .5s;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+.home-imagehover {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  width: 320px;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: transparent;
+  transition: background 2s, transform 2s, border-radius 2s;
+}
+
+.home-imagehover img {
+  height: auto;
+  max-height: 300px;
+  width: 100%;
+  border-radius: 10%;
+  transition: transform 2s, border-radius 2s;
+}
+
+.home-imagehover:hover {
+  background: transparent;
+  opacity: 0.8;
+  transform: scale(1.1);
+  border-radius: 50%;
+}
+
+.home-imagehover:hover img {
+  transform: scale(1.1);
+  border-radius: 50%;
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: #081629;
+  padding-bottom: 6rem;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+span {
+  color: #00abf0;
+}
+
+.about-img {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 90%;
+  border-radius: 50%;
+  border: .2rem solid #00abf0;
+}
+
+.about-img .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 10%;
+  height: 120%;
+  border-radius: 50%;
+  border-top: .2rem solid #081629;
+  border-bottom: .2rem solid #081629;
+  border-left: .2rem solid #00abf0;
+  border-right: .2rem solid #00abf0;
+  animation: aboutSpinner 8s infinite linear;
+}
+
+@keyframes aboutSpinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.about-content {
+  text-align: center;
+  justify-content: center;
+
+}
+
+.about-content h3 {
+  font-size: 2.5rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+#read-more {
+  color: #00abf0;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+#more-text {
+  color: #ededed;
+  display: none;
+  font-size: 1.6rem;
+}
+
+
+.btn-box.btns {
+  display: inline-block;
+  width: 15rem;
+}
+
+.btn-box .btns a::before {
+  background: #00abf0;
+}
+
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  padding-bottom: 5rem;
+}
+
+.education .education-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.education-row .education-column {
+  flex: 1 1 40rem;
+}
+
+.education-column .title {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 2rem;
+}
+
+.education-column .education-box {
+  border-left: .2rem solid #00abf0;
+
+}
+
+.education-box .education-content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-box .education-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: #00abf0;
+  border-radius: 50%;
+}
+
+.education-content .content {
+  position: relative;
+  padding: 1.5rem;
+  border: .2rem solid #283f48;
+  border-radius: .6rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.education-content .content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #283f48;
+  z-index: -1;
+  transition: .5s;
+}
+
+.education-content .content:hover::before {
+  width: 100%
+}
+
+.education-content .content .year {
+  font-size: 1.5rem;
+  color: #00abf0;
+  padding-bottom: .5rem;
+
+}
+
+.education-content .content .year i {
+  padding-right: .5rem;
+}
+
+.education-content .content h3 {
+  font-size: 2rem;
+}
+
+.education-content .content p {
+  font-size: 1.4rem;
+  padding-top: .5rem;
+ 
+}
+
+.skills {
+  min-height: 100vh;           /* Full screen height */
+  display: flex;
+  justify-content: center;     /* Center horizontally */
+  align-items: center;         /* Center vertically */
+  flex-direction: column;      /* Stack heading + list */
+  background: #081629;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 6rem;             /* Bigger heading */
+  margin-bottom: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;         /* Center list items */
+}
+
+.skills-list li {
+  font-size: 3rem;             /* Bigger letters */
+  margin: 1.5rem 0;
+  color: #ededed;
+  font-weight: 600;
+  letter-spacing: 2px;         /* Space between letters */
+  text-transform: uppercase;   /* All caps */
+  text-align: center;          /* Ensure centered text */
+}
+
+
+
+.contact {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact form .input-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field {
+  position: relative;
+  width: 49%;
+  margin: .8rem 0;
+
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: #ededed;
+  background: transparent;
+  border-radius: .6rem;
+  border: .2rem solid #00abf0;
+}
+
+.contact form .input-box .input-field input:focus,
+.contact form .textarea-field textarea:focus {
+  border-color:red;
+ 
+  outline: none;
+}
+
+/* Error handling */
+.contact form .input-box .input-field input.error,
+.contact form .textarea-field textarea.error {
+  border-color: red;
+}
+
+.contact form .input-box .input-field input::placeholder .contact form .textarea-field textarea::placeholder {
+  color: #ededed;
+}
+
+.contact form .focus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: black;
+  border-radius: .6rem;
+  z-index: -1;
+  transition: .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus {
+  width: 100%;
+}
+
+.contact form .textarea-field {
+  position: relative;
+  margin: .8rem 0 2.7rem;
+  display: flex;
+}
+
+.contact form .textarea-field textarea {
+  resize: none;
+}
+
+.contact form .btn-box.btns .btn {
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: #0d0d0e;
+}
+
+.footer-text {
+  font-size: 1.6rem;
+}
+
+.footer-icon a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: #00abf0;
+  border: .2rem solid #00abf0;
+  border-radius: .6rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-icon a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #0d0d0e;
+  z-index: -1;
+  transition: .5s;
+}
+
+.footer-icon a:hover::before {
+  width: 100%
+}
+
+.footer-icon a i {
+  font-size: 2.4rem;
+  color: #081629;
+  transition: .5s;
+}
+
+.footer-icon a:hover i {
+  color: #00abf0;
+}
+/* For Chrome and Safari */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-colour) inset !important;  /* Keep the background black */
+  -webkit-text-fill-color: white !important;  /* Force text color to white */
+}
+
+/* For Firefox */
+input:-moz-autofill {
+  background-color: var(--bg-colour)!important; /* Ensure the background stays black */
+  color: white !important;  /* Ensure text color remains white */
+}
+
+/* General styles for input fields */
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+  color: white;  /* Set text color to white */
+  background-color:transparent  /* Set background color to black */
+}
+
+
+@media(max-width:1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .btn-box {
+    width: 100%;
+  }
+}
+
+@keyframes homeBgText{
+  0%,
+  10%,
+  100%{
+    background-position: -48.4rem 0;
+  }
+  65%,
+  85%
+  {
+    background-position: 0 0;
+  }
+}
+@keyframes homeCursorText{
+  0%,
+  10%,
+  100%{
+    width: 0;
+  }
+  65%,
+  78%,
+  85%
+  {
+    width:48.4rem;
+    opacity: 1;
+  }
+  75%,81%{
+    opacity: 0;
+  }
+}
+/* Styles for tablets and smaller devices */
+@media(max-width:991px) {
+  .header {
+    padding: 1.5rem 2%;
+  }
+
+  section {
+    padding: 6rem 2% 1rem;
+  }
+
+  .home {
+    padding: 0 2%;
+  }
+
+  .footer {
+    padding: 1.5rem 2%;
+  }
+
+  .home-imagehover {
+    right: 10px;
+    width: 220px; /* Decreased width */
+  }
+
+  .btn-box {
+    width: 100%;
+  }
+}
+
+/* Styles for small screens (mobile phones) */
+@media(max-width:768px) {
+  .header {
+    background: #081629;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 40%;
+    padding: 1rem;
+    background: #00abf0;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    transition: .25s ease;
+    transition-delay: .25s;
+    z-index: 1;
+  }
+
+  .navbar.active {
+    left: 0;
+    transition-delay: 0s;
+  }
+
+  .navbar .active-nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #081629;
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    z-index: -1;
+    transition: .25s ease;
+    transition-delay: 0s;
+  }
+
+  .navbar.active .active-nav {
+    left: 0;
+    transition-delay: .25s;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    transform: translateX(-20rem);
+    transition: .25s ease;
+    transition-delay: 0s;
+  }
+
+  .navbar.active a {
+    transform: translateX(0);
+    transition-delay: .25s;
+  }
+
+
+  .home-imagehover {
+    width: 180px; /* Smaller width for mobile */
+  }
+
+  .btn-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+  }
+}
+
+/* Styles for extra small screens (phones with smaller resolution) */
+@media(max-width:520px) {
+  html {
+    font-size: 45%;
+  }
+
+  .home-content h1 {
+    font-size: 3.8rem;
+  }
+
+  
+
+  .home-imagehover {
+    width: 160px; /* Smaller width */
+  }
+
+  .btn-box {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* Ultra small screen devices (smaller than 370px) */
+@media(max-width:370px) {
+  .home {
+    justify-content: center;
+  }
+
+  .home-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+  .home-content P{
+    font-size: 13px;
+  }
+
+  .home-imagehover {
+    width: 140px;
+  }
+
+  .btn-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Reduce padding further */
+  section {
+    padding: 5rem 2% 1rem;
+  }
+
+  .contact form .input-box .input-field {
+    width: 100%;
+  }
+
+  .footer p {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+}
+@media (max-width: 420px) { /* Target devices with screen width less than 768px */
+  .home-imagehover {
+      width: 150px;
+      height: auto;
+      border-radius: 50%; /* Makes the image round */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for better visibility */
+      margin: 0 auto;
+      display: block;
+      opacity: 0.6; /* Applies faded effect only on mobile */
+      transition: opacity 0.3s ease;
+  }
+
+  .home-imagehover:hover {
+      opacity: 1; /* Restores full opacity when hovered on mobile */
+  }
+}
 
 
 
